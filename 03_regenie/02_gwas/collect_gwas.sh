@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#collect gwas
+
+base_path=/data/clusterfs/lag/users/jitame/CONGRADS/geno/regenie/st2_out_gwas/
+
+for fn in CONGRADS_gwas_pmaps_65k_new_c*_melodic_g1_pmap_lstg_oic_1.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g2_pmap_lstg_oic_0.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g1_pmap_lifg_oic_0.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g1_pmap_lstg_oic_2.regenie  CONGRADS_gwas_pmaps_65k_new_c*_melodic_g2_pmap_lstg_oic_1.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g1_pmap_lifg_oic_1.regenie  CONGRADS_gwas_pmaps_65k_new_c*_melodic_g2_pmap_lifg_oic_0.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g2_pmap_lstg_oic_2.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g1_pmap_lifg_oic_2.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g2_pmap_lifg_oic_1.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g1_pmap_lstg_oic_0.regenie CONGRADS_gwas_pmaps_65k_new_c*_melodic_g2_pmap_lifg_oic_2.regenie; do
+
+for fns in $(ls $base_path/c*/$fn);
+do cat $fns > $base_path/$fn
+done
+done
